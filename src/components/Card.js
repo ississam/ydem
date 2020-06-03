@@ -40,8 +40,7 @@ render(){
                                     <p><img className=" img-fluid" src={item.image_100x100} alt={this.state.instruct.title} /></p>
                                     <h4 className="card-title">{item.display_name}</h4>
                                     <p className="card-text">{item.job_title}</p>
-                                    <a href="#" className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
-                                </div>
+                                                             </div>
                             </div>
                         </div>
                         <div className="backside">
