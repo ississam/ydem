@@ -130,4 +130,5 @@ section .section-title {
 .cadre {
     background-color: #29303b;
     color: white;
+    height: 300px;
 }

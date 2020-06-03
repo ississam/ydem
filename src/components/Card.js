@@ -7,11 +7,11 @@ class Card extends React.Component {
         instruct: []
     }
     componentDidMount() {
-        const idu = 874012
+        const idu = 362328
         // console.log(idu)
         axios.get('https://cors-anywhere.herokuapp.com/https://www.udemy.com/api-2.0/courses/' + idu + '/', { headers: { Authorization: 'Basic ZDRUUnpnS0pmTEtnTW16SFdMTXM5dmlFYTY0QWcySnNNOGEzOFpFbzo2UEppUUlENGdwcnJKNFZBZDRwVjV3RTVLb3Nac0NuYmQ4aGRhalFNdXRGd0xzRXh1MFlPSHk1ZzlJTDJhTkpKUHlKSEVFQjFsUU5mUFo0Z09YaFUxdEd1V1ZyOTF3eHdXYnJMVml3Q3FEVnRmWVRERDNSY0MyREpVNGpmazYzcQ==' } })
             .then(res => {
-                console.log(res.data.visible_instructors)
+                console.log(res.data)
                 // console.log(res.data.visible_instructors[1].title)
                 this.setState({
                     instruct: res.data.visible_instructors
@@ -24,9 +24,10 @@ render(){
     return (
       /////card
    
-        
+      
       <div className="container" >
-                <h3></h3>
+          <h2>Créateurs de cours</h2>
+                
              <div className="row">
             {/* <!-- Team member --> */}
             {this.state.instruct.map(item =>
@@ -39,7 +40,7 @@ render(){
                                     <p><img className=" img-fluid" src={item.image_100x100} alt={this.state.instruct.title} /></p>
                                     <h4 className="card-title">{item.display_name}</h4>
                                     <p className="card-text">{item.job_title}</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
+                                    <a href="#" className="btn btn-primary btn-sm"><i className="fa fa-plus"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +48,7 @@ render(){
                             <div className="card">
                                 <div className="card-body text-center mt-4">
                                     <h4 className="card-title">{this.state.job_title}</h4>
-                                    <p className="card-text">Ses publications    is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+                                    <p className="card-text">Ses publications is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                 
                                 </div>
                             </div>
@@ -56,6 +57,7 @@ render(){
                 </div>
             </div>
               )}
+    
         </div>
      
     </div>

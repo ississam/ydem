@@ -1,0 +1,15 @@
+.im {
+     border: 1px solid white;
+     padding: 2%;
+     background-color: white;
+}
+.checked {
+    color: orange;
+  }
+  h6{
+      color: black;
+  }
+  .imgtaille{
+      width: 250px;
+      height: 250px;
+  }
